@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.example.showpdf"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "x86", "armeabi-v7a", "arm64-v8a", "x86_64"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+//    implementation 'com.my.test:myaar:1.0.4'
+
+//    implementation 'com.sdgd.pdf:use_pdf:1.0.0'
+    implementation(name: 'pdf_use_1.0.2', ext: "aar");
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    api 'com.google.code.gson:gson:2.6.2'
+    api 'com.mcxiaoke.volley:library:1.0.+'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+}

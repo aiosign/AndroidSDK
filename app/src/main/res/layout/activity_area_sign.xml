@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="用户id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:text="00755149673060782080"
+            android:id="@+id/edUserID"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="合同id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:text="6f5f5e4ccd46831a63fe977723ff28e6"
+            android:id="@+id/edContractId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edLocationX"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="输入签名区域X坐标"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/edLocationY"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="输入签名区域Y坐标"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/edPage"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="输入签名区域所在页面"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/addArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加签名区域" />
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/testShowPdf"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="开始签署"/>
+
+
+
+
+
+
+</LinearLayout>
