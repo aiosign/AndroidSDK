@@ -57,7 +57,7 @@ public class PreviewActivity extends AppCompatActivity {
         BaseInitPdfSDKUtil.getInstance().setStatusBarColor(getResources().getColor(R.color.colorBlue));//设置statusBarColor
         BaseInitPdfSDKUtil.getInstance().setTextColor(getResources().getColor(R.color.colorWhite));//设置title字体颜色
         mHttpUrlTool = new HttpUrlTool(this);
-
+        BaseInitPdfSDKUtil.getInstance().setBaseUrl("https://open.aiosign.com/api/");
         previewPdf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

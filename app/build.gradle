@@ -43,7 +43,7 @@ dependencies {
 //    implementation 'com.my.test:myaar:1.0.4'
 
 //    implementation 'com.sdgd.pdf:use_pdf:1.0.0'
-    implementation(name: 'pdf_use_1.0.2', ext: "aar");
+    implementation(name: 'pdf_use_1.0.4', ext: "aar");
 
     implementation 'androidx.cardview:cardview:1.0.0'
 

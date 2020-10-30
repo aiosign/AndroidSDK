@@ -71,8 +71,7 @@ public class AreaSignActivity extends AppCompatActivity {
                     x=0;
                 }else{
                     x = Double.parseDouble(edLocationX.getText().toString());
-                }
-                double y = 0;
+                }                double y = 0;
                 if(TextUtils.isEmpty(edLocationY.getText().toString())){
                     y = 0;
                 }else{
@@ -99,7 +98,7 @@ public class AreaSignActivity extends AppCompatActivity {
                 BaseInitPdfSDKUtil.getInstance().initSDKUtils(AreaSignActivity.this);//初始化
                 BaseInitPdfSDKUtil.getInstance().setStatusBarColor(getResources().getColor(R.color.colorBlue));//设置statusBarColor
                 BaseInitPdfSDKUtil.getInstance().setTextColor(getResources().getColor(R.color.colorWhite));//设置title字体颜色
-
+                BaseInitPdfSDKUtil.getInstance().setBaseUrl("https://open.aiosign.com/api/");
                 ParamsBean bean = new ParamsBean();
                 bean.setBrowseType(2);//设置浏览模式 0为签章模式 1为预览模式，2为添加区域印章
 
@@ -128,6 +127,7 @@ public class AreaSignActivity extends AppCompatActivity {
                         Log.i(TAG, error);
                     }
                 });
+
 
                 BaseInitPdfSDKUtil.getInstance().setPDFListener(bean, new OnGetTokenListener() {
                     @Override

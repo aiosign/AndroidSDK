@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         BaseInitPdfSDKUtil.getInstance().initSDKUtils(MainActivity.this);//初始化
         BaseInitPdfSDKUtil.getInstance().setStatusBarColor(getResources().getColor(R.color.colorBlue));//设置statusBarColor
         BaseInitPdfSDKUtil.getInstance().setTextColor(getResources().getColor(R.color.colorWhite));//设置title字体颜色
+        BaseInitPdfSDKUtil.getInstance().setBaseUrl("https://open.aiosign.com/api/");
         mHttpUrlTool = new HttpUrlTool(this);
         mUserID = findViewById(R.id.edUserID);
         mContractId = findViewById(R.id.edContractId);

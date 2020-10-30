@@ -54,6 +54,7 @@ public class FaceActivity extends AppCompatActivity {
         BaseInitFaceDiscernSDKUtil.getInstance().initSDKUtils(FaceActivity.this);//初始化
         BaseInitFaceDiscernSDKUtil.getInstance().setStatusBarColor(getResources().getColor(R.color.colorBlue));//设置statusBarColor
         BaseInitFaceDiscernSDKUtil.getInstance().setTextColor(getResources().getColor(R.color.colorWhite));//设置title字体颜色
+        BaseInitFaceDiscernSDKUtil.getInstance().setBaseUrl("https://open.aiosign.com/api/");
         BaseInitFaceDiscernSDKUtil.getInstance().setFaceDiscernListener("00755149673060782080", new OnGetTokenListener() {
             @Override
             public void onGetToken(Map<String, String> parameters, final OnGetTokenCallBack callBack) {
